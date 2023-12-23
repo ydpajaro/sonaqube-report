@@ -10,11 +10,16 @@ function compararTareas() {
     const datosHoy = parsearDatos(datosHoyTextarea.value);
 
     const correosOrdenados = Object.keys(datosAyer).sort((a, b) => {
-        const diferenciaA = datosHoy[a] - datosAyer[a];
-        const diferenciaB = datosHoy[b] - datosAyer[b];
-        return diferenciaB - diferenciaA;
+        const tareasAyerA = datosAyer[a];
+        const tareasHoyA = datosHoy[a];
+        const tareasAyerB = datosAyer[b];
+        const tareasHoyB = datosHoy[b];
+    
+        const tareasPendientesA = tareasHoyA - tareasAyerA;
+        const tareasPendientesB = tareasHoyB - tareasAyerB;
+    
+        return tareasPendientesB - tareasPendientesA;
     });
-
     const tabla = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
@@ -97,8 +102,9 @@ function obtenerColor(diferencia) {
     if (diferencia > 0) {
         return "red"; 
     } else if (diferencia < 0) {
-        return "orange";
+        return "green";
     } else {
-        return "green"; 
+        return "orange"; 
     }
 }
+
