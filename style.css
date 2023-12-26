@@ -99,3 +99,11 @@
   margin-bottom: 30px;
   
 }
+
+
+footer {
+  background-color: var(--color-azul-oscuro); 
+  color: var(--color-gris-claro);  
+  padding: 20px; 
+  text-align: center; 
+}
