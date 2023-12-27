@@ -50,7 +50,7 @@ function compararTareas() {
     const fechaActualFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFormato);
     const fechaAyerFormateada = fechaAyer.toLocaleDateString('es-ES', opcionesFormato);
    
-    const encabezados = ["Usuario", fechaAyerFormateada, fechaActualFormateada, "Diferencia"];
+    const encabezados = ["Usuario", `Ayer: ${fechaAyerFormateada}`,  `Hoy: ${fechaActualFormateada}`, "Diferencia"];
     const encabezadosRow = document.createElement("tr");
 
     const estiloRoot = getComputedStyle(document.documentElement);
