@@ -8,7 +8,6 @@
     --color-amarillo-palido: #F5EEE0;
     --color-azul-oscuro: #002855;
     --color-gris-claro: #b8babd;
-   
   }
 
   body {
@@ -55,7 +54,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
- 
 }
 
 .datos textarea {
@@ -65,8 +63,6 @@
   background-color: var(--color-blanco);
   color: #333;
   margin-bottom: 20px;
-
-  
 }
 
 
@@ -84,8 +80,7 @@
   color: var(--color-gris-claro); 
   border: none; 
   border-radius: 5px; 
-  cursor: pointer; 
-  
+  cursor: pointer;  
 }
 
 .comparar button:hover {
@@ -96,8 +91,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
-  
+  margin-bottom: 30px;  
 }
 
 

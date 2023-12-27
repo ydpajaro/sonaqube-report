@@ -5,6 +5,7 @@ function compararTareas() {
 
     const datosAyerTextarea = document.getElementById("datosAyerInput");
     const datosHoyTextarea = document.getElementById("datosHoyInput");
+    const blackList = ['anthonyflorezx'];
 
     if (!datosAyerTextarea.value.trim() || !datosHoyTextarea.value.trim()) {
         resultadosDiv.textContent = "Por favor, ingresa datos en ambas áreas.";
@@ -55,6 +56,9 @@ function compararTareas() {
 
 
     correosOrdenados.forEach(correo => {
+        if (blackList.includes(correo.toLocaleLowerCase())){
+            return;
+        }
         const tareasAyerCantidad = datosAyer[correo];     
         const tareasHoyCantidad = datosHoy[correo];
         const diferencia = tareasHoyCantidad - tareasAyerCantidad;
