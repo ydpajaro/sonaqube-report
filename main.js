@@ -41,13 +41,27 @@ function compararTareas() {
     const tabla = document.createElement("table");
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
+
+    const fechaActual = new Date();
+    const fechaAyer = new Date();
+    fechaAyer.setDate(fechaAyer.getDate() - 1);
+
+    const opcionesFormato = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const fechaActualFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFormato);
+    const fechaAyerFormateada = fechaAyer.toLocaleDateString('es-ES', opcionesFormato);
    
-    const encabezados = ["Usuario", "Ayer", "Hoy", "Diferencia"];
+    const encabezados = ["Usuario", fechaAyerFormateada, fechaActualFormateada, "Diferencia"];
     const encabezadosRow = document.createElement("tr");
+
+    const estiloRoot = getComputedStyle(document.documentElement);
+    const colorAzulOscuro = estiloRoot.getPropertyValue('--color-azul-oscuro');
+    const colorGrisClaro = estiloRoot.getPropertyValue('--color-gris-claro');
 
     encabezados.forEach(texto => {
         const th = document.createElement("th");
         th.textContent = texto;
+        th.style.color = colorGrisClaro;
+        th.style.backgroundColor = colorAzulOscuro;
         encabezadosRow.appendChild(th);
     });
     
@@ -83,6 +97,7 @@ function compararTareas() {
 
         tbody.appendChild(fila);
     });
+    
 
     tabla.appendChild(tbody);
     resultadosDiv.appendChild(tabla);
