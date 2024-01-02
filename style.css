@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
 
 :root {
-    --color-blanco: #ffffff;
-    --color-azul-claro: #add8e6; 
-    --color-verde-claro: #90ee90;
-    --color-negro: #000000; 
-    --color-amarillo-palido: #F5EEE0;
-    --color-azul-oscuro: #002855;
-    --color-gris-claro: #b8babd;
+  color-scheme: light dark;
+  --color-blanco: #ffffff;
+  --color-azul-claro: #add8e6; 
+  --color-verde-claro: #90ee90;
+  --color-negro: #000000; 
+  --color-amarillo-palido: #F5EEE0;
+  --color-azul-oscuro: #002855;
+  --color-gris-claro: #b8babd;
   }
 
   body {
@@ -96,7 +97,12 @@
 
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
+  height: 20vh;
   width: 100%;
   background-color: var(--color-azul-oscuro); 
   color: var(--color-gris-claro);  
