@@ -103,7 +103,6 @@ footer {
   justify-content: center;
   bottom: 0;
   height: 20vh;
-  width: 100%;
   background-color: var(--color-azul-oscuro); 
   color: var(--color-gris-claro);  
   padding: 20px; 
