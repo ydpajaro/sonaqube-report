@@ -27,16 +27,11 @@ function compararTareas() {
         }
     });
 
-    const correosOrdenados = Object.keys(datosAyer).sort((a, b) => {
-        const tareasAyerA = datosAyer[a];
+    const correosOrdenados = Object.keys(datosHoy).sort((a, b) => {
         const tareasHoyA = datosHoy[a];
-        const tareasAyerB = datosAyer[b];
         const tareasHoyB = datosHoy[b];
     
-        const tareasPendientesA = tareasHoyA - tareasAyerA;
-        const tareasPendientesB = tareasHoyB - tareasAyerB;
-    
-        return tareasPendientesB - tareasPendientesA;
+        return tareasHoyB - tareasHoyA;
     });
     const tabla = document.createElement("table");
     const thead = document.createElement("thead");
